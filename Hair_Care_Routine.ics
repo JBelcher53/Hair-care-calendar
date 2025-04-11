@@ -2,67 +2,82 @@ BEGIN:VCALENDAR
 VERSION:2.0
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250413T100000
-DTEND;TZID=America/New_York:20250413T110000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:Wash+DeepCondition-0@hairroutine
+DTSTART;TZID=America/New_York:20250413T203000
+DTEND;TZID=America/New_York:20250413T213000
 SUMMARY:Wash + Deep Condition
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DESCRIPTION:• Wash with SheaMoisture Jamaican Black Castor Oil Shampoo\n• Deep condition with Aussie 3 Minute Miracle or TGIN Honey Mask\n• Rinse with cool water\n• Apply leave-in conditioner and seal with oil
 END:VEVENT
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250414T080000
-DTEND;TZID=America/New_York:20250414T082000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:Moisturize+ScalpMassage-1@hairroutine
+DTSTART;TZID=America/New_York:20250415T203000
+DTEND;TZID=America/New_York:20250415T210000
 SUMMARY:Moisturize + Scalp Massage
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DESCRIPTION:• Lightly spritz with water\n• Apply Mielle Leave-In Conditioner or Cantu Daily Oil Moisturizer\n• Massage scalp with Jamaican Black Castor Oil for 5-10 minutes
 END:VEVENT
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250415T200000
-DTEND;TZID=America/New_York:20250415T201000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:NightScalpCare-2@hairroutine
-SUMMARY:Night Scalp Care
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DTSTART;TZID=America/New_York:20250417T203000
+DTEND;TZID=America/New_York:20250417T210000
+SUMMARY:Midweek Moisture + Stretch
+DESCRIPTION:• Apply leave-in conditioner or Mielle moisturizer\n• Light oil to seal (black castor oil or almond oil)\n• Gentle stretching or banding if needed
 END:VEVENT
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250416T080000
-DTEND;TZID=America/New_York:20250416T082000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:MidweekMoisture+OptionalStretch-3@hairroutine
-SUMMARY:Midweek Moisture + Optional Stretch
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DTSTART;TZID=America/New_York:20250419T203000
+DTEND;TZID=America/New_York:20250419T210000
+SUMMARY:Protein Maintenance (ApHogee)
+DESCRIPTION:• Use ApHogee Two-Step Protein Treatment (biweekly)\n• Rinse thoroughly\n• Follow up with deep moisture conditioner\n• If not using ApHogee, do a light moisturizing refresh
 END:VEVENT
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250417T180000
-DTEND;TZID=America/New_York:20250417T182000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:ProteinMaintenance(Aphogee)-4@hairroutine
-SUMMARY:Protein Maintenance (Aphogee)
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
-END:VEVENT
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250418T080000
-DTEND;TZID=America/New_York:20250418T082000
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:Moisturize+ScalpCheck-5@hairroutine
+DTSTART;TZID=America/New_York:20250422T203000
+DTEND;TZID=America/New_York:20250422T210000
 SUMMARY:Moisturize + Scalp Check
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DESCRIPTION:• Check for dryness or itchiness\n• Apply leave-in and seal as needed\n• Use tea tree oil if scalp feels irritated or dry
 END:VEVENT
+
 BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250419T090000
-DTEND;TZID=America/New_York:20250419T091500
-RRULE:FREQ=WEEKLY
-DTSTAMP:20250411T194717Z
-UID:RestDay/MoistureCheck-6@hairroutine
-SUMMARY:Rest Day / Moisture Check
-DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+DTSTART;TZID=America/New_York:20250426T203000
+DTEND;TZID=America/New_York:20250426T210000
+SUMMARY:Refresh Style / Moisture
+DESCRIPTION:• Refresh curls or twist pattern with Eco Styler or Curl Custard\n• Moisturize and seal\n• Use durag or satin cap overnight
 END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250429T203000
+DTEND;TZID=America/New_York:20250429T210000
+SUMMARY:Dry Scalp / Moisture Check
+DESCRIPTION:• Check scalp for buildup or dryness\n• Light cleanse with As I Am CoWash if needed\n• Re-moisturize and apply scalp oil
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250504T203000
+DTEND;TZID=America/New_York:20250504T213000
+SUMMARY:Wash + Deep Condition
+DESCRIPTION:• Wash with SheaMoisture Jamaican Black Castor Oil Shampoo\n• Deep condition with Aussie 3 Minute Miracle or TGIN Honey Mask\n• Rinse with cool water\n• Apply leave-in conditioner and seal with oil
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250507T203000
+DTEND;TZID=America/New_York:20250507T210000
+SUMMARY:Moisturize + Scalp Massage
+DESCRIPTION:• Lightly spritz with water\n• Apply Mielle Leave-In Conditioner or Cantu Daily Oil Moisturizer\n• Massage scalp with Jamaican Black Castor Oil for 5-10 minutes
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250509T203000
+DTEND;TZID=America/New_York:20250509T210000
+SUMMARY:Midweek Moisture + Stretch
+DESCRIPTION:• Apply leave-in conditioner or Mielle moisturizer\n• Light oil to seal (black castor oil or almond oil)\n• Gentle stretching or banding if needed
+END:VEVENT
+
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250511T203000
+DTEND;TZID=America/New_York:20250511T210000
+SUMMARY:Moisturize + Scalp Check
+DESCRIPTION:• Check for dryness or itchiness\n• Apply leave-in and seal as needed\n• Use tea tree oil if scalp feels irritated or dry
+END:VEVENT
+
 END:VCALENDAR
