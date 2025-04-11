@@ -1,53 +1,30 @@
-from datetime import datetime, timedelta
-import pytz
-from uuid import uuid4
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
 
-# Function to format datetime for ICS
-def format_ics_datetime(dt):
-    return dt.strftime('%Y%m%dT%H%M%S')
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250413T203000
+DTEND;TZID=America/New_York:20250413T213000
+UID:...@hairroutine
+SUMMARY:Wash + Deep Condition
+DESCRIPTION:• Wash with SheaMoisture Jamaican Black Castor Oil Shampoo\n• Deep condition with Aussie 3 Minute Miracle or TGIN Honey Mask\n• Rinse with cool water\n• Apply leave-in conditioner and seal with oil
+END:VEVENT
 
-# Set timezone
-tz = pytz.timezone("America/New_York")
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250413T081500
+DTEND;TZID=America/New_York:20250413T082500
+UID:...@hairroutine
+SUMMARY:Daily Morning Hair Check
+DESCRIPTION:1. Check for dryness or flaking\n2. If dry, spritz lightly with water\n3. Apply leave-in conditioner\n4. Seal with oil (castor or almond oil)\n5. Leave it alone if it’s not dry
+END:VEVENT
 
-# Start and end dates
-start_date = tz.localize(datetime(2025, 4, 13, 21, 45))
-end_date = tz.localize(datetime(2025, 5, 11, 22, 0))
-
-# Create header for ICS
-ics_content = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "CALSCALE:GREGORIAN",
-    "METHOD:PUBLISH"
-]
-
-# Add daily events
-current_date = start_date
-while current_date.date() <= end_date.date():
-    dtstart = format_ics_datetime(current_date)
-    dtend = format_ics_datetime(current_date + timedelta(minutes=15))
-    uid = f"{uuid4()}@hairroutine"
-    ics_content += [
-        "BEGIN:VEVENT",
-        f"DTSTART;TZID=America/New_York:{dtstart}",
-        f"DTEND;TZID=America/New_York:{dtend}",
-        f"UID:{uid}",
-        "SUMMARY:Daily Night Hair Care",
-        "DESCRIPTION:1. Light spritz with water (if needed)\\n"
-        "2. Apply a dab of leave-in conditioner (Kinky-Curly or Mielle)\\n"
-        "3. Seal with castor or almond oil (only if dry)\\n"
-        "4. Put on your satin durag\\n"
-        "5. Sleep on your satin pillowcase",
-        "END:VEVENT"
-    ]
-    current_date += timedelta(days=1)
-
-# End calendar
-ics_content.append("END:VCALENDAR")
-
-# Save file
-ics_path = "/mnt/data/Daily_Hair_Care_Routine.ics"
-with open(ics_path, "w") as f:
-    f.write("\n".join(ics_content))
-
-ics_path
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250413T214500
+DTEND;TZID=America/New_York:20250413T220000
+UID:...@hairroutine
+SUMMARY:Daily Night Hair Care
+DESCRIPTION:1. Light spritz with water (if needed)\n2. Apply a dab of leave-in conditioner (Kinky-Curly or Mielle)\n3. Seal with castor or almond oil (only if dry)\n4. Put on your satin durag\n5. Sleep on your satin pillowcase
+END:VEVENT
+...
+END:VCALENDAR
