@@ -1,0 +1,68 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250413T100000
+DTEND;TZID=America/New_York:20250413T110000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:Wash+DeepCondition-0@hairroutine
+SUMMARY:Wash + Deep Condition
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250414T080000
+DTEND;TZID=America/New_York:20250414T082000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:Moisturize+ScalpMassage-1@hairroutine
+SUMMARY:Moisturize + Scalp Massage
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250415T200000
+DTEND;TZID=America/New_York:20250415T201000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:NightScalpCare-2@hairroutine
+SUMMARY:Night Scalp Care
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250416T080000
+DTEND;TZID=America/New_York:20250416T082000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:MidweekMoisture+OptionalStretch-3@hairroutine
+SUMMARY:Midweek Moisture + Optional Stretch
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250417T180000
+DTEND;TZID=America/New_York:20250417T182000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:ProteinMaintenance(Aphogee)-4@hairroutine
+SUMMARY:Protein Maintenance (Aphogee)
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250418T080000
+DTEND;TZID=America/New_York:20250418T082000
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:Moisturize+ScalpCheck-5@hairroutine
+SUMMARY:Moisturize + Scalp Check
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=America/New_York:20250419T090000
+DTEND;TZID=America/New_York:20250419T091500
+RRULE:FREQ=WEEKLY
+DTSTAMP:20250411T194717Z
+UID:RestDay/MoistureCheck-6@hairroutine
+SUMMARY:Rest Day / Moisture Check
+DESCRIPTION:Weekly hair routine step for healthy growth and moisture.
+END:VEVENT
+END:VCALENDAR
