@@ -1,83 +1,53 @@
-BEGIN:VCALENDAR
-VERSION:2.0
-CALSCALE:GREGORIAN
-METHOD:PUBLISH
+from datetime import datetime, timedelta
+import pytz
+from uuid import uuid4
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250413T203000
-DTEND;TZID=America/New_York:20250413T213000
-SUMMARY:Wash + Deep Condition
-DESCRIPTION:• Wash with SheaMoisture Jamaican Black Castor Oil Shampoo\n• Deep condition with Aussie 3 Minute Miracle or TGIN Honey Mask\n• Rinse with cool water\n• Apply leave-in conditioner and seal with oil
-END:VEVENT
+# Function to format datetime for ICS
+def format_ics_datetime(dt):
+    return dt.strftime('%Y%m%dT%H%M%S')
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250415T203000
-DTEND;TZID=America/New_York:20250415T210000
-SUMMARY:Moisturize + Scalp Massage
-DESCRIPTION:• Lightly spritz with water\n• Apply Mielle Leave-In Conditioner or Cantu Daily Oil Moisturizer\n• Massage scalp with Jamaican Black Castor Oil for 5-10 minutes
-END:VEVENT
+# Set timezone
+tz = pytz.timezone("America/New_York")
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250417T203000
-DTEND;TZID=America/New_York:20250417T210000
-SUMMARY:Midweek Moisture + Stretch
-DESCRIPTION:• Apply leave-in conditioner or Mielle moisturizer\n• Light oil to seal (black castor oil or almond oil)\n• Gentle stretching or banding if needed
-END:VEVENT
+# Start and end dates
+start_date = tz.localize(datetime(2025, 4, 13, 21, 45))
+end_date = tz.localize(datetime(2025, 5, 11, 22, 0))
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250419T203000
-DTEND;TZID=America/New_York:20250419T210000
-SUMMARY:Protein Maintenance (ApHogee)
-DESCRIPTION:• Use ApHogee Two-Step Protein Treatment (biweekly)\n• Rinse thoroughly\n• Follow up with deep moisture conditioner\n• If not using ApHogee, do a light moisturizing refresh
-END:VEVENT
+# Create header for ICS
+ics_content = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "CALSCALE:GREGORIAN",
+    "METHOD:PUBLISH"
+]
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250422T203000
-DTEND;TZID=America/New_York:20250422T210000
-SUMMARY:Moisturize + Scalp Check
-DESCRIPTION:• Check for dryness or itchiness\n• Apply leave-in and seal as needed\n• Use tea tree oil if scalp feels irritated or dry
-END:VEVENT
+# Add daily events
+current_date = start_date
+while current_date.date() <= end_date.date():
+    dtstart = format_ics_datetime(current_date)
+    dtend = format_ics_datetime(current_date + timedelta(minutes=15))
+    uid = f"{uuid4()}@hairroutine"
+    ics_content += [
+        "BEGIN:VEVENT",
+        f"DTSTART;TZID=America/New_York:{dtstart}",
+        f"DTEND;TZID=America/New_York:{dtend}",
+        f"UID:{uid}",
+        "SUMMARY:Daily Night Hair Care",
+        "DESCRIPTION:1. Light spritz with water (if needed)\\n"
+        "2. Apply a dab of leave-in conditioner (Kinky-Curly or Mielle)\\n"
+        "3. Seal with castor or almond oil (only if dry)\\n"
+        "4. Put on your satin durag\\n"
+        "5. Sleep on your satin pillowcase",
+        "END:VEVENT"
+    ]
+    current_date += timedelta(days=1)
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250426T203000
-DTEND;TZID=America/New_York:20250426T210000
-SUMMARY:Refresh Style / Moisture
-DESCRIPTION:• Refresh curls or twist pattern with Eco Styler or Curl Custard\n• Moisturize and seal\n• Use durag or satin cap overnight
-END:VEVENT
+# End calendar
+ics_content.append("END:VCALENDAR")
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250429T203000
-DTEND;TZID=America/New_York:20250429T210000
-SUMMARY:Dry Scalp / Moisture Check
-DESCRIPTION:• Check scalp for buildup or dryness\n• Light cleanse with As I Am CoWash if needed\n• Re-moisturize and apply scalp oil
-END:VEVENT
+# Save file
+ics_path = "/mnt/data/Daily_Hair_Care_Routine.ics"
+with open(ics_path, "w") as f:
+    f.write("\n".join(ics_content))
 
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250504T203000
-DTEND;TZID=America/New_York:20250504T213000
-SUMMARY:Wash + Deep Condition
-DESCRIPTION:• Wash with SheaMoisture Jamaican Black Castor Oil Shampoo\n• Deep condition with Aussie 3 Minute Miracle or TGIN Honey Mask\n• Rinse with cool water\n• Apply leave-in conditioner and seal with oil
-END:VEVENT
-
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250507T203000
-DTEND;TZID=America/New_York:20250507T210000
-SUMMARY:Moisturize + Scalp Massage
-DESCRIPTION:• Lightly spritz with water\n• Apply Mielle Leave-In Conditioner or Cantu Daily Oil Moisturizer\n• Massage scalp with Jamaican Black Castor Oil for 5-10 minutes
-END:VEVENT
-
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250509T203000
-DTEND;TZID=America/New_York:20250509T210000
-SUMMARY:Midweek Moisture + Stretch
-DESCRIPTION:• Apply leave-in conditioner or Mielle moisturizer\n• Light oil to seal (black castor oil or almond oil)\n• Gentle stretching or banding if needed
-END:VEVENT
-
-BEGIN:VEVENT
-DTSTART;TZID=America/New_York:20250511T203000
-DTEND;TZID=America/New_York:20250511T210000
-SUMMARY:Moisturize + Scalp Check
-DESCRIPTION:• Check for dryness or itchiness\n• Apply leave-in and seal as needed\n• Use tea tree oil if scalp feels irritated or dry
-END:VEVENT
-
-END:VCALENDAR
+ics_path
